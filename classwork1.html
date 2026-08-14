@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classwork1</title>
+</head>
+<body>
+    <p id="totalTshirt"></p>
+    <p id="totalCap"></p>
+    <p id="totalEarnings"></p>
+    <p id="updatedTshirtTotal"></p>
+    <p id="updatedTotal"></p>
+    <script>
+        let tshirtCount=5;
+        let tshirtPrice=400;
+
+        let capCount=3;
+        let capPrice=150;
+
+        let tshirtTotal=(tshirtCount * tshirtPrice);
+        let capTotal=(capCount * capPrice);
+
+        let  totalEarnings=(tshirtTotal + capTotal);
+
+        document.getElementById("totalTshirt").innerHTML=("Tshirt Total =" + tshirtTotal);
+        document.getElementById("totalCap").innerHTML=("Cap Total =" + capTotal);
+        document.getElementById("totalEarnings").innerHTML=("Total Earnings =" + totalEarnings);
+
+        tshirtPrice=450;
+        tshirtTotal=(tshirtPrice * tshirtCount);
+        totalEarnings=(tshirtTotal + capTotal);
+
+        document.getElementById("updatedTshirtTotal").innerHTML=("Updated Tshirt Total =" + tshirtTotal);
+         document.getElementById("updatedTotal").innerHTML=("Updated Total Earnings =" + totalEarnings);
+
+        
+
+
+    
+        
+    </script>
+</body>
+</html>

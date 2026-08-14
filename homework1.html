@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework1</title>
+</head>
+<body>
+    <p id="rice"></p>
+    <p id="sugar"></p>
+    <p id="wheat"></p>
+    <p id="bill"></p>
+    <p id="updatedWheat"></p>
+    <p id="updatedBill"></p>
+    <script>
+        let ricePrice=50;
+        let riceQuantity=2;
+
+        let sugarPrice=60;
+        let sugarQuantity=4;
+
+        let wheatPrice=40;
+        let wheatQuantity=6;
+
+        let riceCost=(ricePrice * riceQuantity);
+        let sugarCost=(sugarPrice * sugarQuantity);
+        let wheatCost=(wheatPrice * wheatQuantity);
+         let totalBill=(riceCost + sugarCost + wheatCost);
+        
+        document.getElementById("rice").innerHTML=("Rice Cost =" + riceCost);
+        document.getElementById("sugar").innerHTML=("Sugar Cost =" + sugarCost);
+        document.getElementById("wheat").innerHTML=("Wheat Cost =" + wheatCost);
+        document.getElementById("bill").innerHTML=("Total Bill =" + totalBill);
+
+        wheatQuantity=3;
+        wheatCost=(wheatPrice * wheatQuantity);
+        totalBill=(riceCost + sugarCost + wheatCost);
+        
+        document.getElementById("updatedWheat").innerHTML=("Updated Wheat Cost =" + wheatCost);
+        document.getElementById("updatedBill").innerHTML=("Updated Total Bill =" + totalBill);
+
+
+
+
+    </script>
+</body>
+</html>
