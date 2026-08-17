@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework2</title>
+</head>
+<body>
+    <p id="contact1"></p>
+    <p id="contact2"></p>
+   
+    <script>
+        let contact1={
+            name:"sandra",
+            phone:7032456783,
+            email:"sandra@!23",
+
+           
+            getinfo:function(){
+                return " name : " + this.name+" phone : "+this.phone+" email : "+this.email;
+                
+            }
+            
+           
+        
+     };
+
+     let contact2={
+        name:"soorya",
+        phone:9447223871,
+        email:"soorya@123",
+
+        getinfo:function(){
+           return " name : "+ this.name+" phone : "+this.phone+" email : "+this.email; 
+        }
+
+     };
+
+     function printContactInfo(contact,elementId){
+
+        document.getElementById(elementId).innerHTML=contact.getinfo();
+       
+
+
+       
+
+     }
+
+        printContactInfo(contact1,"contact1");
+        printContactInfo(contact2,"contact2");
+    </script>
+</body>
+</html>
