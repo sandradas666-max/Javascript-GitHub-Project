@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework3</title>
+</head>
+<body>
+    <p id="id1"></p>
+    <script>
+        let userProfile={
+            username:"CoolUser99",
+            bio:"I LOVE coding! JavaScript is Great!!!"
+        };
+        function cleanUserBio(profile){
+            let cleanUsername=profile.username.trim().toLowerCase();
+            let cleanBio=profile.bio.trim().toLowerCase();
+            cleanBio=cleanBio.replaceAll("javascript","js");
+            let bioLength=cleanBio.length;
+            return{
+                username:cleanUsername,
+                bio:cleanBio,
+                length:bioLength
+            };
+
+        }
+
+        let result=cleanUserBio(userProfile);
+        console.log(result);
+
+        document.getElementById("id1").innerHTML="Username:"+result.username+"<br>Bio:"+result.bio+"<br>Length:"+result.length;
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork3</title>
+</head>
+<body>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    <p id="fourth"></p>
+    <p id="fifth"></p>
+    <script>
+        let feedback="I loved the FOOD and the service!";
+
+        let trimmedText=feedback.trim();
+        let lowerText=trimmedText.toLowerCase();
+        let replacedText=lowerText.replace("food","ambience");
+        let position=replacedText.indexOf("service");
+        let words=replacedText.split("");
+
+        document.getElementById("first").innerHTML=(trimmedText);
+        document.getElementById("second").innerHTML=(lowerText);
+        document.getElementById("third").innerHTML=(replacedText);
+        document.getElementById("fourth").innerHTML(position);
+        document.getElementById("fifth").innerHTML(words);
+    </script>
+</body>
+</html>
