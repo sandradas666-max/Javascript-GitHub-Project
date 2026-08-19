@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classwork4</title>
+  </head>
+<body>
+
+<p id="result"></p>
+
+<script>
+
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+let userScore = "75";
+
+let scoreNumber = Number(userScore);
+
+let difference = randomNumber - scoreNumber;
+
+let squareRoot = Math.round(Math.sqrt(scoreNumber));
+
+let piValue = Math.PI;
+
+let convertedNumber = "50" * 2;
+
+document.getElementById("result").innerHTML =
+"Random Number: " + randomNumber +
+"<br><br>User Score: " + scoreNumber +
+"<br><br>Difference: " + difference +
+"<br><br>Rounded Square Root: " + squareRoot +
+"<br><br>PI Value: " + piValue +
+"<br><br>50 × 2 = " + convertedNumber;
+
+</script>
+
+</body>
+</html>
