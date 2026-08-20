@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework5</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button onclick="adminFeatures()">Admin Features</button>
+    <script>
+        let admin={userName:"kavya",
+        age:20,
+        isAdmin:true
+
+        };
+
+    function adminFeatures(){
+
+        let result=(admin.age>=18)&&(admin.isAdmin===true) ?  "Access Granted" :"Access Denied" ;
+
+        document.getElementById("demo1").innerHTML=(result);
+
+        document.getElementById("demo2").innerHTML=("age" in admin);
+
+        delete admin.age;
+
+       // document.getElementById("demo2").innerHTML=JSON.stringify(admin);
+
+
+                             }
+
+    </script>
+</body>
+</html>
