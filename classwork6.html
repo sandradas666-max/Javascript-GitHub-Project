@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork6</title>
+</head>
+<body>
+
+
+    <p id="demo"></p>
+
+    <script>
+
+        //Product names and prices
+        let products = ["Apple", "Banana", "Orange"];
+        let prices = [50, 60, 40];
+
+        //Merge product names and prices
+        let productList = [];
+
+        for (let i = 0; i < products.length; i++) {
+            productList.push(
+                "Product: " + products[i] + " - Price: " + prices[i]
+            );
+        }
+
+        //  Display all products
+        for (let i = 0; i < productList.length; i++) {
+            document.getElementById("demo").innerHTML +=
+                productList[i] + "<br>";
+        }
+
+        // Filter products with price greater than 50
+        let filteredProducts = [];
+
+        for (let i = 0; i < prices.length; i++) {
+            if (prices[i] > 50) {
+                filteredProducts.push(
+                    "Product: " + products[i] + " - Price: " + prices[i]
+                );
+            }
+        }
+
+        document.getElementById("demo").innerHTML +=
+            "<br>Products above 50:<br>";
+
+        for (let i = 0; i < filteredProducts.length; i++) {
+            document.getElementById("demo").innerHTML +=
+                filteredProducts[i] + "<br>";
+        }
+
+        // Add Watermelon with price 80
+        products.push("Watermelon");
+        prices.push(80);
+
+        //  Create updated product list
+        let updatedList = [];
+
+        for (let i = 0; i < products.length; i++) {
+            updatedList.push(
+                "Product: " + products[i] + " - Price: " + prices[i]
+            );
+        }
+
+        // Display updated list
+        document.getElementById("demo").innerHTML +=
+            "<br>Updated Product List:<br>";
+
+        for (let i = 0; i < updatedList.length; i++) {
+            document.getElementById("demo").innerHTML +=
+                updatedList[i] + "<br>";
+        }
+
+    </script>
+</body>
+</html>

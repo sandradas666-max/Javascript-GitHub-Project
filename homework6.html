@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework6</title>
+</head>
+<body>
+
+    <button onclick="showResults()">Show Results</button>
+
+    <script>
+
+        //  Create an array of student objects
+        let students = [
+            { name: "Anu", score: 75 },
+            { name: "Ravi", score: 55 },
+            { name: "Meera", score: 90 },
+            { name: "Arun", score: 40 },
+            { name: "Diya", score: 95 }
+        ];
+
+
+        function showResults() {
+
+            // List all student names
+            let studentNames = students.map(function(student) {
+                return student.name;
+            });
+
+            console.log("All Student Names:", studentNames);
+
+
+            //  Names of students who scored more than 60
+            let above60 = students
+                .filter(function(student) {
+                    return student.score > 60;
+                })
+                .map(function(student) {
+                    return student.name;
+                });
+
+            console.log("Students scoring more than 60:", above60);
+
+
+            // Find total score
+            let totalScore = students.reduce(function(total, student) {
+                return total + student.score;
+            }, 0);
+
+            console.log("Total Score:", totalScore);
+
+
+            // Check if all students passed
+            let allPassed = students.every(function(student) {
+                return student.score > 35;
+            });
+
+            console.log("All students passed:", allPassed);
+
+
+            // Check if at least one student scored more than 90
+            let oneAbove90 = students.some(function(student) {
+                return student.score > 90;
+            });
+
+            console.log("At least one scored more than 90:", oneAbove90);
+
+
+            //  Sort students by score in descending order
+            let sortedStudents = students.sort(function(a, b) {
+                return b.score - a.score;
+            });
+
+            console.log("Students sorted by score:", sortedStudents);
+
+        }
+
+    </script>
+</body>
+</html>

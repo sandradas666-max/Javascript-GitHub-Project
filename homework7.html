@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework7</title>
+</head>
+<body>
+
+    <h2>Event Reminder</h2>
+
+    <input type="date" id="dateInput">
+
+    <button onclick="showDetails()">Check Date</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function showDetails() {
+
+            // Get date from input
+            let inputDate = new Date(
+                document.getElementById("dateInput").value
+            );
+
+            // Get year, month and day
+            let year = inputDate.getFullYear();
+
+            let month = inputDate.toLocaleString("en-US", {
+                month: "long"
+            });
+
+            let day = inputDate.getDate();
+
+            // Today's date
+            let today = new Date();
+
+            // Calculate full years passed
+            let years = today.getFullYear() - inputDate.getFullYear();
+
+            // Check whether this year's date has happened
+            let birthdayThisYear = new Date(
+                today.getFullYear(),
+                inputDate.getMonth(),
+                inputDate.getDate()
+            );
+
+            if (birthdayThisYear > today) {
+                years--;
+            }
+
+            // Custom message
+            let message;
+
+            if (years >= 1) {
+                message = "It has been more than a year since that date.";
+            } else {
+                message = "It has been less than a year since that date.";
+            }
+
+            // Display result
+            document.getElementById("result").innerHTML =
+                "Year: " + year + "<br>" +
+                "Month: " + month + "<br>" +
+                "Day: " + day + "<br>" +
+                "Full years passed: " + years + "<br>" +
+                message;
+        }
+
+    </script>
+
+</body>
+</html>
