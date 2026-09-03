@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork10</title>
+</head>
+<body>
+    <script>
+        //create json text
+        let jsonText='{"name":"john","email":"john@gmail.com","message":"hello"}';
+       
+        try{
+            let user=JSON.parse(jsonText);
+
+            const showMessage=()=>{
+                console.log("message received from"+user.name);
+            };
+            showMessage();
+
+        }
+        catch(error){
+            console.log("error:invalid json");
+        }
+    </script>
+</body>
+</html>
