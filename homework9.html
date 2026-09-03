@@ -16,10 +16,17 @@
             //capital
 
             let capitalWords=comment.match(/\b[A-Z][a-zA-Z]*\b/g);
+            let capitalWordCount = capitalWords ? capitalWords.length : 0;
+
+            //return
+
+            return "Cleaned Comment:"+cleanedComment+"\nNumber Count:"+numberCount+"\nCapital Word Count:"+capitalWordCount;
 
 
 
         }
+        let comment= "I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.";
+        console.log(filterComment(comment));
     </script>
 </body>
 </html>
