@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork11</title>
+</head>
+<body>
+    <script>
+        class Book{
+            constructor(title,author,price){
+                this.title=title;
+                this.author=author;
+                this.price=price;
+            }
+           get getTitle(){
+            return this.title;
+           }
+           get getAuthor(){
+            return this.author;
+           }
+           set setPrice(newPrice){
+            if(typeof newPrice ==="number"&&newPrice>0){
+                this.price=newPrice;
+            }
+           }
+        }
+
+        let book1=new Book("harry potter","J.K.Rowling",500);
+
+        //valid price
+        book1.setPrice=600;
+
+        //invalid price
+        book1.setPrice=-100;
+
+        console.log("title:",book1.getTitle);
+        console.log("Author:",book1.getAuthor);
+        console.log("price:",book1.price);
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework11</title>
+</head>
+<body>
+<script>
+
+class User {
+
+    constructor(name, age, email) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+
+    get getName() {
+        return this.name;
+    }
+
+    get getAge() {
+        return this.age;
+    }
+
+    set setEmail(newEmail) {
+        if (newEmail.includes("@")) {
+            this.email = newEmail;
+        }
+    }
+}
+
+let user1 = new User("John", 25, "john@gmail.com");
+
+// Correct email
+user1.setEmail = "john123@gmail.com";
+
+// Incorrect email
+user1.setEmail = "john123gmail.com";
+
+// Print details using getters
+console.log("Name:", user1.getName);
+console.log("Age:", user1.getAge);
+console.log("Email:", user1.email);
+
+</script>
+
+</body>
+</html>
